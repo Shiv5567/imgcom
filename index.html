@@ -37,8 +37,18 @@
   }
 }
 </script>
-    <!-- Adsterra Global Script -->
+    <!-- Adsterra Global Script (Social Bar) -->
     <script src="https://pl28532570.effectivegatecpm.com/c7/47/c8/c747c80bd2266ce693b09a480c67cbce.js" async></script>
+    
+    <!-- Direct Link Pop-under Logic -->
+    <script>
+      document.addEventListener('click', function() {
+        if(!window.ad_triggered) {
+          window.open('https://www.effectivegatecpm.com/ttz15272?key=f912466b03f48d05a684462229d57d96', '_blank');
+          window.ad_triggered = true;
+        }
+      }, { once: true });
+    </script>
 </head>
   <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
     <div id="root"></div>
