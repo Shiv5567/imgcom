@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
+  const sponsoredLink = "https://www.effectivegatecpm.com/ttz15272?key=f912466b03f48d05a684462229d57d96";
+
   return (
     <div className="relative min-h-screen bg-white overflow-hidden">
       <SEO 
@@ -27,7 +29,6 @@ const Home: React.FC = () => {
           </div>
 
           <div className="relative inline-block mb-16">
-            {/* The "Blue Box" from the screenshot - stylistic overlapping element */}
             <div className="absolute -right-8 -bottom-12 w-[60%] h-[120%] bg-indigo-600 opacity-90 rounded-[2rem] z-[-1] hidden md:block transform rotate-1"></div>
             
             <h1 className="text-7xl sm:text-[9rem] font-black text-gray-900 tracking-[-0.04em] leading-[0.85] relative">
@@ -40,25 +41,25 @@ const Home: React.FC = () => {
             The professional suite for creators. Reduce file sizes and create PDFs without your files ever leaving your device.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Tool Card 1 */}
             <Link 
               to="/image-compressor"
-              className="group relative flex flex-col items-start p-12 bg-gray-50/50 rounded-[3rem] border border-gray-100 transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-indigo-200/40"
+              className="group relative flex flex-col items-start p-10 bg-gray-50/50 rounded-[3rem] border border-gray-100 transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-indigo-200/40"
             >
-              <div className="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-indigo-200 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-14 h-14 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-indigo-200 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </div>
-              <h2 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">Compressor</h2>
-              <p className="text-gray-500 text-left text-base leading-relaxed mb-8">
+              <h2 className="text-3xl font-black text-gray-900 mb-4 tracking-tight">Compressor</h2>
+              <p className="text-gray-500 text-left text-sm leading-relaxed mb-8">
                 Optimized algorithms to shave off KBs while maintaining pixel-perfect quality.
               </p>
               <div className="mt-auto w-full flex justify-between items-center">
-                <span className="text-indigo-600 font-black text-xs uppercase tracking-[0.2em]">Start Optimizing</span>
-                <div className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white group-hover:border-transparent transition-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                <span className="text-indigo-600 font-black text-[10px] uppercase tracking-[0.2em]">Start Optimizing</span>
+                <div className="w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white group-hover:border-transparent transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </div>
               </div>
             </Link>
@@ -66,24 +67,51 @@ const Home: React.FC = () => {
             {/* Tool Card 2 */}
             <Link 
               to="/image-to-pdf"
-              className="group relative flex flex-col items-start p-12 bg-gray-50/50 rounded-[3rem] border border-gray-100 transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-blue-200/40"
+              className="group relative flex flex-col items-start p-10 bg-gray-50/50 rounded-[3rem] border border-gray-100 transition-all hover:-translate-y-2 hover:bg-white hover:shadow-2xl hover:shadow-blue-200/40"
             >
-              <div className="w-16 h-16 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-blue-100 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl shadow-blue-100 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h2 className="text-4xl font-black text-gray-900 mb-4 tracking-tight">Image to PDF</h2>
-              <p className="text-gray-500 text-left text-base leading-relaxed mb-8">
+              <h2 className="text-3xl font-black text-gray-900 mb-4 tracking-tight">Image to PDF</h2>
+              <p className="text-gray-500 text-left text-sm leading-relaxed mb-8">
                 Stitch multiple photos into a single, high-quality document in seconds.
               </p>
               <div className="mt-auto w-full flex justify-between items-center">
-                <span className="text-blue-500 font-black text-xs uppercase tracking-[0.2em]">Start Conversion</span>
-                <div className="w-12 h-12 rounded-full bg-white border border-gray-100 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white group-hover:border-transparent transition-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                <span className="text-blue-500 font-black text-[10px] uppercase tracking-[0.2em]">Start Conversion</span>
+                <div className="w-10 h-10 rounded-full bg-white border border-gray-100 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white group-hover:border-transparent transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </div>
               </div>
             </Link>
+
+            {/* Sponsored Native Card - Direct Link Implementation */}
+            <a 
+              href={sponsoredLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col items-start p-10 bg-indigo-900 text-white rounded-[3rem] border border-indigo-800 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/40 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-4">
+                 <span className="text-[9px] font-black tracking-widest bg-white/10 px-3 py-1 rounded-full uppercase">Sponsored</span>
+              </div>
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-md text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:bg-white group-hover:text-indigo-900 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h2 className="text-3xl font-black mb-4 tracking-tight">Advanced Tools</h2>
+              <p className="text-indigo-200 text-left text-sm leading-relaxed mb-8">
+                Boost your workflow with our partner's cloud-based optimization suite.
+              </p>
+              <div className="mt-auto w-full flex justify-between items-center">
+                <span className="font-black text-[10px] uppercase tracking-[0.2em]">Get Started Free</span>
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-indigo-900 transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>

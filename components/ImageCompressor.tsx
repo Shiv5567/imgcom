@@ -20,6 +20,8 @@ const ImageCompressor: React.FC = () => {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const sponsoredLink = "https://www.effectivegatecpm.com/ttz15272?key=f912466b03f48d05a684462229d57d96";
+
   const formatSize = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -237,13 +239,25 @@ const ImageCompressor: React.FC = () => {
                           </div>
                        </div>
                     </div>
-                    <a
-                      href={result.compressedUrl}
-                      download={result.name}
-                      className="w-full sm:w-auto px-20 py-7 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-[2.5rem] shadow-2xl shadow-indigo-100 transition-all transform hover:-translate-y-1 text-2xl tracking-tight text-center"
-                    >
-                      Download Image
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                      <a
+                        href={result.compressedUrl}
+                        download={result.name}
+                        className="px-16 py-6 bg-indigo-600 hover:bg-indigo-700 text-white font-black rounded-[2.5rem] shadow-2xl shadow-indigo-100 transition-all transform hover:-translate-y-1 text-xl tracking-tight text-center"
+                      >
+                        Download Image
+                      </a>
+                      {/* Sponsored Action */}
+                      <a
+                        href={sponsoredLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-16 py-6 bg-gray-900 hover:bg-black text-white font-black rounded-[2.5rem] transition-all transform hover:-translate-y-1 text-xl tracking-tight text-center flex items-center justify-center gap-3"
+                      >
+                        <svg className="w-5 h-5 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1a1 1 0 112 0v1a1 1 0 11-2 0zM13.536 14.95a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM6.464 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414z" /></svg>
+                        Boost Speed
+                      </a>
+                    </div>
                   </div>
                 </div>
               )}

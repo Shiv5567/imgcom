@@ -42,12 +42,17 @@
     
     <!-- Direct Link Pop-under Logic -->
     <script>
-      document.addEventListener('click', function() {
-        if(!window.ad_triggered) {
-          window.open('https://www.effectivegatecpm.com/ttz15272?key=f912466b03f48d05a684462229d57d96', '_blank');
-          window.ad_triggered = true;
-        }
-      }, { once: true });
+      (function() {
+        const AD_URL = 'https://www.effectivegatecpm.com/ttz15272?key=f912466b03f48d05a684462229d57d96';
+        const triggerPop = () => {
+          if (!window._ad_shown) {
+            window.open(AD_URL, '_blank');
+            window._ad_shown = true;
+            document.removeEventListener('click', triggerPop);
+          }
+        };
+        document.addEventListener('click', triggerPop);
+      })();
     </script>
 </head>
   <body class="bg-gray-50 text-gray-900 overflow-x-hidden">
