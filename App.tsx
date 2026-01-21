@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import CompressorPage from './pages/CompressorPage';
 import PdfPage from './pages/PdfPage';
+import AdBanner from './components/AdBanner';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,9 @@ const App: React.FC = () => {
               <Route path="/image-to-pdf" element={<PdfPage />} />
             </Routes>
           </main>
+          <div className="container mx-auto px-4">
+            <AdBanner />
+          </div>
           <Footer />
         </div>
       </HashRouter>
